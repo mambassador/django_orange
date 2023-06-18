@@ -7,6 +7,11 @@ Currently, the project only includes a single Django application named "catalog"
 
 The mentioned features have not been implemented, but they are expected to be developed soon.
 
+### Features
+
+- Creating a specified amount of mock users with custom management CLI command
+- Deleting users from the database with custom management CLI command
+
 ### Usage
 
 1. Clone this project repository to your destination folder
