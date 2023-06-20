@@ -24,7 +24,6 @@ platformdirs==3.5.1
 pluggy==1.0.0
 pycodestyle==2.10.0
 pyflakes==3.0.1
-pygraphviz==1.11
 pyproject_api==1.5.1
 python-dateutil==2.8.2
 six==1.16.0
