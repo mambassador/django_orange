@@ -1,4 +1,4 @@
-ONE TO MANY RELATIONSHIP
+MANY TO ONE RELATIONSHIP
 
 >>> cities = City.objects.prefetch_related("customer_set").all()
 >>> for city in cities:
