@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.timezone import now
 
 
 class City(models.Model):
@@ -14,6 +15,7 @@ class Customer(models.Model):
     last_name = models.CharField(max_length=50)
     city = models.ForeignKey(City, on_delete=models.CASCADE)
     products = models.ManyToManyField("Product")
+    date_created = models.DateTimeField(default=now)
 
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
@@ -21,7 +23,7 @@ class Customer(models.Model):
 
 class Product(models.Model):
     name = models.CharField(max_length=50)
-    suppliers = models.ManyToManyField("Supplier")
+    price = models.PositiveIntegerField(default=0)
 
     def __str__(self):
         return self.name

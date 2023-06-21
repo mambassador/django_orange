@@ -1,0 +1,75 @@
+ONE TO MANY RELATIONSHIP
+
+>>> cities = City.objects.prefetch_related("customer_set").all()
+>>> for city in cities:
+...     print(city.name, city.customer_set.all())
+...
+SELECT "catalog_city"."id",
+       "catalog_city"."name",
+       "catalog_city"."country"
+  FROM "catalog_city"
+Execution time: 0.000139s [Database: default]
+SELECT "catalog_customer"."id",
+       "catalog_customer"."first_name",
+       "catalog_customer"."last_name",
+       "catalog_customer"."city_id",
+       "catalog_customer"."date_created"
+  FROM "catalog_customer"
+ WHERE "catalog_customer"."city_id" IN (1, 2, 3, 4)
+Execution time: 0.002325s [Database: default]
+Malyn <QuerySet [<Customer: Stephan Petrenko>]>
+Kyiv <QuerySet [<Customer: Victor Yanukovych>]>
+London <QuerySet [<Customer: John Deer>, <Customer: Jack Kerouack>]>
+New York <QuerySet [<Customer: Ivan Sidorov>]>
+
+
+
+MANY TO MANY RELATIONSHIP
+
+>>> customers = Customer.objects.prefetch_related("products").all()
+>>> for customer in customers:
+...     print(customer.first_name, customer.last_name, customer.products.all())
+...
+SELECT "catalog_customer"."id",
+       "catalog_customer"."first_name",
+       "catalog_customer"."last_name",
+       "catalog_customer"."city_id",
+       "catalog_customer"."date_created"
+  FROM "catalog_customer"
+Execution time: 0.000150s [Database: default]
+SELECT ("catalog_customer_products"."customer_id") AS "_prefetch_related_val_customer_id",
+       "catalog_product"."id",
+       "catalog_product"."name"
+  FROM "catalog_product"
+ INNER JOIN "catalog_customer_products"
+    ON ("catalog_product"."id" = "catalog_customer_products"."product_id")
+ WHERE "catalog_customer_products"."customer_id" IN (1, 2, 3, 4, 5)
+Execution time: 0.000114s [Database: default]
+John Deer <QuerySet [<Product: Eat me>, <Product: Fizi>, <Product: Damel>]>
+Victor Yanukovych <QuerySet [<Product: Eat me>, <Product: Fizi>, <Product: Damel>]>
+Stephan Petrenko <QuerySet []>
+Jack Kerouack <QuerySet []>
+Ivan Sidorov <QuerySet []>
+
+
+
+ONE TO ONE RELATIONSHIP
+
+>>> suppliers = Supplier.objects.select_related("city").all()
+>>> for supplier in suppliers:
+...     print(supplier.name, supplier.city)
+...
+SELECT "catalog_supplier"."id",
+       "catalog_supplier"."name",
+       "catalog_supplier"."city_id",
+       "catalog_city"."id",
+       "catalog_city"."name",
+       "catalog_city"."country"
+  FROM "catalog_supplier"
+ INNER JOIN "catalog_city"
+    ON ("catalog_supplier"."city_id" = "catalog_city"."id")
+Execution time: 0.000152s [Database: default]
+CASIO Malyn
+ZAVOD Kyiv
+SILPO London
+FOP HUDYI New York
