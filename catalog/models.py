@@ -13,7 +13,7 @@ class City(models.Model):
     name = models.CharField(max_length=50)
     country = models.CharField(max_length=50)
 
-    def __str__(self):
+    def __str__(self) -> models.CharField:
         """Returns a string representation of the city
 
         Returns:
@@ -39,7 +39,7 @@ class Customer(models.Model):
     products = models.ManyToManyField("Product")
     date_created = models.DateTimeField(default=now)
 
-    def __str__(self):
+    def __str__(self) -> str:
         """Returns a string representation of the customer
 
         Returns:
@@ -59,7 +59,7 @@ class Product(models.Model):
     name = models.CharField(max_length=50)
     price = models.PositiveIntegerField(default=0)
 
-    def __str__(self):
+    def __str__(self) -> models.CharField:
         """Returns a string representation of the product
 
         Returns:
@@ -79,7 +79,7 @@ class Supplier(models.Model):
     name = models.CharField(max_length=50)
     city = models.OneToOneField(City, on_delete=models.CASCADE)
 
-    def __str__(self):
+    def __str__(self) -> models.CharField:
         """Returns a string representation of the supplier
 
         Returns:
