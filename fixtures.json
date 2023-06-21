@@ -1,146 +1,276 @@
 [
 {
-  "model": "auth.user",
-  "pk": 34,
+  "model": "catalog.city",
+  "pk": 1,
   "fields": {
-    "password": "pbkdf2_sha256$600000$ueVuaA49W62jKl1ycE1hkh$uisjgocD8RbS1jVTWaRYuuFWzE/2qBufyxf+iEaQuIs=",
-    "last_login": null,
-    "is_superuser": true,
-    "username": "admin",
-    "first_name": "",
-    "last_name": "",
-    "email": "admin@noreply.com",
-    "is_staff": true,
-    "is_active": true,
-    "date_joined": "2023-06-17T16:08:17.965Z",
-    "groups": [],
-    "user_permissions": []
+    "name": "Malyn",
+    "country": "Ukraine"
   }
 },
 {
-  "model": "auth.user",
-  "pk": 37,
+  "model": "catalog.city",
+  "pk": 2,
   "fields": {
-    "password": "pbkdf2_sha256$600000$QdAaM38mm4syjh4zTK6uhH$duT0zLePpAiQorTF318LgQ4TRDOktUE232EvDXwyjR0=",
-    "last_login": null,
-    "is_superuser": false,
-    "username": "ngibson",
-    "first_name": "",
-    "last_name": "",
-    "email": "rachelbonilla@example.com",
-    "is_staff": false,
-    "is_active": true,
-    "date_joined": "2023-06-17T17:05:48.323Z",
-    "groups": [],
-    "user_permissions": []
+    "name": "Kyiv",
+    "country": "Ukraine"
   }
 },
 {
-  "model": "auth.user",
-  "pk": 38,
+  "model": "catalog.city",
+  "pk": 3,
   "fields": {
-    "password": "pbkdf2_sha256$600000$AbVQfwHApinfWm5lfqCSqk$ltDBMpwOlkqMnLOg4biUvHfQ++rG5TmO8PE2fPFt6V0=",
-    "last_login": null,
-    "is_superuser": false,
-    "username": "sramos",
-    "first_name": "",
-    "last_name": "",
-    "email": "kathleen06@example.org",
-    "is_staff": false,
-    "is_active": true,
-    "date_joined": "2023-06-17T17:05:48.751Z",
-    "groups": [],
-    "user_permissions": []
+    "name": "London",
+    "country": "Great Britain"
   }
 },
 {
-  "model": "auth.user",
-  "pk": 39,
+  "model": "catalog.city",
+  "pk": 4,
   "fields": {
-    "password": "pbkdf2_sha256$600000$LKWNr5WHVrWS4mpG3Pk5Tj$KU2RBfVuV+DurwhCFhAEMs4MoiJ1i6OK7aX5haFC/rM=",
-    "last_login": null,
-    "is_superuser": false,
-    "username": "davisjoshua",
-    "first_name": "",
-    "last_name": "",
-    "email": "brittanyjarvis@example.com",
-    "is_staff": false,
-    "is_active": true,
-    "date_joined": "2023-06-17T17:05:49.184Z",
-    "groups": [],
-    "user_permissions": []
+    "name": "New York",
+    "country": "USA"
   }
 },
 {
-  "model": "auth.user",
-  "pk": 41,
+  "model": "catalog.city",
+  "pk": 5,
   "fields": {
-    "password": "pbkdf2_sha256$600000$7NZhdthxzRHuXqil5fmu5J$wUneS0ND/jWwWKQ+jY5J5ln59iEjQGoUQUxZWHFPClw=",
-    "last_login": null,
-    "is_superuser": false,
-    "username": "charles09",
-    "first_name": "",
-    "last_name": "",
-    "email": "jwilson@example.com",
-    "is_staff": false,
-    "is_active": true,
-    "date_joined": "2023-06-17T17:05:50.040Z",
-    "groups": [],
-    "user_permissions": []
+    "name": "Madrid",
+    "country": "Spain"
   }
 },
 {
-  "model": "auth.user",
-  "pk": 42,
+  "model": "catalog.city",
+  "pk": 6,
   "fields": {
-    "password": "pbkdf2_sha256$600000$NLLCnYLJdSebF5rxK7eBaA$X4mVLoFjplo9q+P0ZtYKgmIFrc5CEak3np/w3A/X8pQ=",
-    "last_login": null,
-    "is_superuser": false,
-    "username": "dilloncervantes",
-    "first_name": "",
-    "last_name": "",
-    "email": "hancockdenise@example.org",
-    "is_staff": false,
-    "is_active": true,
-    "date_joined": "2023-06-17T17:07:03.732Z",
-    "groups": [],
-    "user_permissions": []
+    "name": "Amsterdam",
+    "country": "Netherlands"
   }
 },
 {
-  "model": "auth.user",
-  "pk": 44,
+  "model": "catalog.city",
+  "pk": 7,
   "fields": {
-    "password": "pbkdf2_sha256$600000$pcR1EdjCkgpbK5wkenKhd4$MhGGu0e83nBF576oJgdp5RuB6+EAYP1TEMpH+fS+SH0=",
-    "last_login": null,
-    "is_superuser": false,
-    "username": "clinton22",
-    "first_name": "",
-    "last_name": "",
-    "email": "tmcknight@example.net",
-    "is_staff": false,
-    "is_active": true,
-    "date_joined": "2023-06-17T17:07:04.583Z",
-    "groups": [],
-    "user_permissions": []
+    "name": "Toronto",
+    "country": "Canada"
   }
 },
 {
-  "model": "auth.user",
-  "pk": 45,
+  "model": "catalog.city",
+  "pk": 8,
   "fields": {
-    "password": "pbkdf2_sha256$600000$1m3VUmNnJwPgbH6IixIzjT$asPZenQ328kj+edZIpxbvLPbvmeoX/3eivxnD+auXHc=",
-    "last_login": null,
-    "is_superuser": false,
-    "username": "lauranelson",
-    "first_name": "",
-    "last_name": "",
-    "email": "kbarrera@example.net",
-    "is_staff": false,
-    "is_active": true,
-    "date_joined": "2023-06-17T17:07:05.024Z",
-    "groups": [],
-    "user_permissions": []
+    "name": "Tokyo",
+    "country": "Japan"
+  }
+},
+{
+  "model": "catalog.customer",
+  "pk": 1,
+  "fields": {
+    "first_name": "John",
+    "last_name": "Deer",
+    "city": 3,
+    "date_created": "2023-06-21T01:03:26.551Z",
+    "products": [
+      1,
+      2,
+      3
+    ]
+  }
+},
+{
+  "model": "catalog.customer",
+  "pk": 2,
+  "fields": {
+    "first_name": "Victor",
+    "last_name": "Yanukovych",
+    "city": 2,
+    "date_created": "2023-06-21T01:03:26.551Z",
+    "products": [
+      1,
+      2,
+      3
+    ]
+  }
+},
+{
+  "model": "catalog.customer",
+  "pk": 3,
+  "fields": {
+    "first_name": "Stephan",
+    "last_name": "Petrenko",
+    "city": 1,
+    "date_created": "2023-06-21T01:03:26.551Z",
+    "products": []
+  }
+},
+{
+  "model": "catalog.customer",
+  "pk": 4,
+  "fields": {
+    "first_name": "Jack",
+    "last_name": "Kerouack",
+    "city": 3,
+    "date_created": "2023-06-21T01:03:26.551Z",
+    "products": []
+  }
+},
+{
+  "model": "catalog.customer",
+  "pk": 5,
+  "fields": {
+    "first_name": "Ivan",
+    "last_name": "Sidorov",
+    "city": 4,
+    "date_created": "2023-06-21T09:13:02.715Z",
+    "products": [
+      5,
+      6
+    ]
+  }
+},
+{
+  "model": "catalog.customer",
+  "pk": 6,
+  "fields": {
+    "first_name": "Sergey",
+    "last_name": "Petrenko",
+    "city": 5,
+    "date_created": "2023-06-21T14:28:16.736Z",
+    "products": [
+      6
+    ]
+  }
+},
+{
+  "model": "catalog.customer",
+  "pk": 7,
+  "fields": {
+    "first_name": "Ivanna",
+    "last_name": "Sydoruk",
+    "city": 6,
+    "date_created": "2023-06-21T14:28:16.736Z",
+    "products": [
+      5
+    ]
+  }
+},
+{
+  "model": "catalog.customer",
+  "pk": 8,
+  "fields": {
+    "first_name": "Snezhana",
+    "last_name": "Yegorova",
+    "city": 7,
+    "date_created": "2023-06-21T14:28:16.736Z",
+    "products": []
+  }
+},
+{
+  "model": "catalog.customer",
+  "pk": 9,
+  "fields": {
+    "first_name": "Sasha",
+    "last_name": "Maslo",
+    "city": 7,
+    "date_created": "2023-06-21T14:28:16.736Z",
+    "products": []
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 1,
+  "fields": {
+    "name": "Eat me",
+    "price": 40
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 2,
+  "fields": {
+    "name": "Fizi",
+    "price": 50
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 3,
+  "fields": {
+    "name": "Damel",
+    "price": 47
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 4,
+  "fields": {
+    "name": "Choco Pie",
+    "price": 40
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 5,
+  "fields": {
+    "name": "Ovokital",
+    "price": 100
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 6,
+  "fields": {
+    "name": "Vegetus",
+    "price": 150
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 7,
+  "fields": {
+    "name": "Izheko",
+    "price": 250
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 8,
+  "fields": {
+    "name": "Ineo",
+    "price": 130
+  }
+},
+{
+  "model": "catalog.supplier",
+  "pk": 1,
+  "fields": {
+    "name": "CASIO",
+    "city": 1
+  }
+},
+{
+  "model": "catalog.supplier",
+  "pk": 2,
+  "fields": {
+    "name": "ZAVOD",
+    "city": 2
+  }
+},
+{
+  "model": "catalog.supplier",
+  "pk": 3,
+  "fields": {
+    "name": "SILPO",
+    "city": 3
+  }
+},
+{
+  "model": "catalog.supplier",
+  "pk": 4,
+  "fields": {
+    "name": "FOP HUDYI",
+    "city": 4
   }
 }
 ]
