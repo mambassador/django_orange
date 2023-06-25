@@ -1,9 +1,10 @@
+from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render
 
 from .forms import TriangleForm
 
 
-def calculate_hypotenuse(request):
+def calculate_hypotenuse(request: HttpRequest) -> HttpResponse:
     """Calculates the hypotenuse of a triangle based
     on the provided catheti values.
 
