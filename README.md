@@ -11,6 +11,7 @@ The mentioned features have not been implemented, but they are expected to be de
 
 - Creating a specified amount of mock users with custom management CLI command
 - Deleting users from the database with custom management CLI command
+- Calculating hypotenuse with given catheti from user input (go to http://localhost:8000/triangle)
 
 ### Usage
 
