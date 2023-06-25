@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hypotenuse Calculator</title>
+</head>
+<body>
+    <form action="{% url 'triangle:calc_hypo' %}" , method="get">
+        {{ form.as_p }}
+        <button type="submit">Calculate</button>
+        <input type="button" value="Reset" onclick="location.href='{% url 'triangle:calc_hypo' %}'">
+
+        {% if hypotenuse is not None %}
+            <p>The hypotenuse is: {{ hypotenuse }}</p>
+        {% else %}
+            <p>No hypotenuse calculated yet.</p>
+        {% endif %}
+    </form>
+<h4> Requirements:</h4>
+<ul>
+    <li>Cathetus must be between 1 and 1 000 000 000</li>
+    <li>Cathetus must be integer number</li>
+</ul>
+</body>
+</html>
