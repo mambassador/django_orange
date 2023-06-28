@@ -17,7 +17,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
+from triangle.views import create_person, edited, registered, update_person
+
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("triangle/", include("triangle.urls")),
+    path("person/", create_person, name="create-person"),
+    path("person/<int:pk>", update_person, name="update-person"),
+    path("person/registered/", registered, name="registered"),
+    path("person/edited/", edited, name="edited"),
 ]

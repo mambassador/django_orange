@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Person</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'triangle/css/styles.css' %}"/>
+</head>
+<body>
+    <h1>Update Person</h1>
+    <form action="{% url 'update-person' person.id %}" , method="post" novalidate>
+        {% csrf_token %}
+
+        {% for f in form %}
+            <p><label class="form-label" for="{{ f.id_for_label }}">{{ f.label }}: </label>{{ f }}</p>
+            <div class="form-error">{{ f.errors }}</div>
+        {% endfor %}
+
+        <button class= form-button type="submit">Update</button>
+
+    </form>
+</body>
+</html>
