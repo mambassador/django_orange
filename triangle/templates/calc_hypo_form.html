@@ -8,10 +8,10 @@
     <title>Hypotenuse Calculator</title>
 </head>
 <body>
-    <form action="{% url 'triangle:calc_hypo' %}" , method="get">
+    <form action="{% url 'triangle:calc-hypo' %}" , method="get">
         {{ form.as_p }}
         <button type="submit">Calculate</button>
-        <input type="button" value="Reset" onclick="location.href='{% url 'triangle:calc_hypo' %}'">
+        <input type="button" value="Reset" onclick="location.href='{% url 'triangle:calc-hypo' %}'">
 
         {% if hypotenuse is not None %}
             <p>The hypotenuse is: {{ hypotenuse }}</p>

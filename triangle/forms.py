@@ -1,5 +1,7 @@
 from django import forms
 
+from .models import Person
+
 
 class TriangleForm(forms.Form):
     """A form for inputting triangle catheti lengths
@@ -34,6 +36,7 @@ class TriangleForm(forms.Form):
             forms.ValidationError: if the cathetus value is not within
                                    the valid range or if the field is empty
         """
+        super().clean()
         cathetus = self.cleaned_data.get(field)
         if cathetus:
             if cathetus < 1 or cathetus > 1000000000:
@@ -61,3 +64,26 @@ class TriangleForm(forms.Form):
         """
         cathetus = self.clean_cathetus("cathetus_2")
         return cathetus
+
+
+class PersonModelForm(forms.ModelForm):
+    class Meta:
+        model = Person
+        fields = ["first_name", "last_name", "E-mail"]
+        widgets = {
+            "first_name": forms.TextInput(attrs={"placeholder": "John"}),
+            "last_name": forms.TextInput(attrs={"placeholder": "Doe"}),
+            "E-mail": forms.EmailInput(attrs={"placeholder": "john@doe.com"}),
+        }
+
+    def clean_first_name(self):
+        first_name = self.cleaned_data["first_name"]
+        if not first_name.isalpha():
+            raise forms.ValidationError("First name should contain only alphabetic characters.")
+        return first_name
+
+    def clean_last_name(self):
+        last_name = self.cleaned_data["last_name"]
+        if not last_name.isalpha():
+            raise forms.ValidationError("Last name should contain only alphabetic characters.")
+        return last_name
