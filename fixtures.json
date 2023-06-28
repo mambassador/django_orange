@@ -1,276 +1,236 @@
 [
 {
-  "model": "catalog.city",
-  "pk": 1,
-  "fields": {
-    "name": "Malyn",
-    "country": "Ukraine"
-  }
-},
-{
-  "model": "catalog.city",
-  "pk": 2,
-  "fields": {
-    "name": "Kyiv",
-    "country": "Ukraine"
-  }
-},
-{
-  "model": "catalog.city",
-  "pk": 3,
-  "fields": {
-    "name": "London",
-    "country": "Great Britain"
-  }
-},
-{
-  "model": "catalog.city",
-  "pk": 4,
-  "fields": {
-    "name": "New York",
-    "country": "USA"
-  }
-},
-{
-  "model": "catalog.city",
-  "pk": 5,
-  "fields": {
-    "name": "Madrid",
-    "country": "Spain"
-  }
-},
-{
-  "model": "catalog.city",
-  "pk": 6,
-  "fields": {
-    "name": "Amsterdam",
-    "country": "Netherlands"
-  }
-},
-{
-  "model": "catalog.city",
+  "model": "triangle.person",
   "pk": 7,
-  "fields": {
-    "name": "Toronto",
-    "country": "Canada"
-  }
-},
-{
-  "model": "catalog.city",
-  "pk": 8,
-  "fields": {
-    "name": "Tokyo",
-    "country": "Japan"
-  }
-},
-{
-  "model": "catalog.customer",
-  "pk": 1,
   "fields": {
     "first_name": "John",
-    "last_name": "Deer",
-    "city": 3,
-    "date_created": "2023-06-21T01:03:26.551Z",
-    "products": [
-      1,
-      2,
-      3
-    ]
+    "last_name": "Doe",
+    "E-mail": "john@doe.com"
   }
 },
 {
-  "model": "catalog.customer",
-  "pk": 2,
-  "fields": {
-    "first_name": "Victor",
-    "last_name": "Yanukovych",
-    "city": 2,
-    "date_created": "2023-06-21T01:03:26.551Z",
-    "products": [
-      1,
-      2,
-      3
-    ]
-  }
-},
-{
-  "model": "catalog.customer",
-  "pk": 3,
-  "fields": {
-    "first_name": "Stephan",
-    "last_name": "Petrenko",
-    "city": 1,
-    "date_created": "2023-06-21T01:03:26.551Z",
-    "products": []
-  }
-},
-{
-  "model": "catalog.customer",
-  "pk": 4,
+  "model": "triangle.person",
+  "pk": 8,
   "fields": {
     "first_name": "Jack",
-    "last_name": "Kerouack",
-    "city": 3,
-    "date_created": "2023-06-21T01:03:26.551Z",
-    "products": []
+    "last_name": "West",
+    "E-mail": "jack@west.com"
   }
 },
 {
-  "model": "catalog.customer",
-  "pk": 5,
-  "fields": {
-    "first_name": "Ivan",
-    "last_name": "Sidorov",
-    "city": 4,
-    "date_created": "2023-06-21T09:13:02.715Z",
-    "products": [
-      5,
-      6
-    ]
-  }
-},
-{
-  "model": "catalog.customer",
-  "pk": 6,
-  "fields": {
-    "first_name": "Sergey",
-    "last_name": "Petrenko",
-    "city": 5,
-    "date_created": "2023-06-21T14:28:16.736Z",
-    "products": [
-      6
-    ]
-  }
-},
-{
-  "model": "catalog.customer",
-  "pk": 7,
-  "fields": {
-    "first_name": "Ivanna",
-    "last_name": "Sydoruk",
-    "city": 6,
-    "date_created": "2023-06-21T14:28:16.736Z",
-    "products": [
-      5
-    ]
-  }
-},
-{
-  "model": "catalog.customer",
-  "pk": 8,
-  "fields": {
-    "first_name": "Snezhana",
-    "last_name": "Yegorova",
-    "city": 7,
-    "date_created": "2023-06-21T14:28:16.736Z",
-    "products": []
-  }
-},
-{
-  "model": "catalog.customer",
+  "model": "triangle.person",
   "pk": 9,
   "fields": {
-    "first_name": "Sasha",
-    "last_name": "Maslo",
-    "city": 7,
-    "date_created": "2023-06-21T14:28:16.736Z",
-    "products": []
+    "first_name": "Joe",
+    "last_name": "Biden",
+    "E-mail": "joe@biden.com"
   }
 },
 {
-  "model": "catalog.product",
+  "model": "triangle.person",
+  "pk": 10,
+  "fields": {
+    "first_name": "Vladimir",
+    "last_name": "Huylo",
+    "E-mail": "vova@huylo.com"
+  }
+},
+{
+  "model": "triangle.person",
+  "pk": 11,
+  "fields": {
+    "first_name": "Paul",
+    "last_name": "Smith",
+    "E-mail": "paul@smith.com"
+  }
+},
+{
+  "model": "triangle.person",
+  "pk": 12,
+  "fields": {
+    "first_name": "Marta",
+    "last_name": "Lynn",
+    "E-mail": "marta@lynn.com"
+  }
+},
+{
+  "model": "auth.user",
   "pk": 1,
   "fields": {
-    "name": "Eat me",
-    "price": 40
+    "password": "pbkdf2_sha256$600000$puJehAfZHbAEhkm8dHj2WU$2GWItJhehsoNydcDc3g/h+YVrOVv4I58kVhqku+Aa8E=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "rodriguezmichael",
+    "first_name": "",
+    "last_name": "",
+    "email": "maddenbenjamin@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-06-28T17:38:05.357Z",
+    "groups": [],
+    "user_permissions": []
   }
 },
 {
-  "model": "catalog.product",
+  "model": "auth.user",
   "pk": 2,
   "fields": {
-    "name": "Fizi",
-    "price": 50
+    "password": "pbkdf2_sha256$600000$J3q2sRRn1vlk5Xbytc1cEf$fexvRR5JbLczd8kx/hSGT7BRg6a7LOdTceRXSKlSuOM=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "ashleyhart",
+    "first_name": "",
+    "last_name": "",
+    "email": "judithyoung@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-06-28T17:38:05.821Z",
+    "groups": [],
+    "user_permissions": []
   }
 },
 {
-  "model": "catalog.product",
+  "model": "auth.user",
   "pk": 3,
   "fields": {
-    "name": "Damel",
-    "price": 47
+    "password": "pbkdf2_sha256$600000$0JWEt73u6LFo9C20a9dwPC$iXt9MChV/MMA1+dm2QD6TlY9cCdugLDYfgKbIJrIKPY=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "mendezlisa",
+    "first_name": "",
+    "last_name": "",
+    "email": "chasenelson@example.net",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-06-28T17:38:06.295Z",
+    "groups": [],
+    "user_permissions": []
   }
 },
 {
-  "model": "catalog.product",
+  "model": "auth.user",
   "pk": 4,
   "fields": {
-    "name": "Choco Pie",
-    "price": 40
+    "password": "pbkdf2_sha256$600000$LemCGd7SNhZd8SnNKMqZCv$TFCG32Fz2i4awDLxNqwja76gwizoqLRS7W8cISxEVGk=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "kenneth57",
+    "first_name": "",
+    "last_name": "",
+    "email": "harveyjeanne@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-06-28T17:38:06.767Z",
+    "groups": [],
+    "user_permissions": []
   }
 },
 {
-  "model": "catalog.product",
+  "model": "auth.user",
   "pk": 5,
   "fields": {
-    "name": "Ovokital",
-    "price": 100
+    "password": "pbkdf2_sha256$600000$Kzv0wHlAPXvfGEuPHmYyhp$hE0AV3MnEYCgP3NHKla2v5+XrN7Mo9XpeynC+DRbRgg=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "estout",
+    "first_name": "",
+    "last_name": "",
+    "email": "holmesleslie@example.net",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-06-28T17:38:07.233Z",
+    "groups": [],
+    "user_permissions": []
   }
 },
 {
-  "model": "catalog.product",
+  "model": "auth.user",
   "pk": 6,
   "fields": {
-    "name": "Vegetus",
-    "price": 150
+    "password": "pbkdf2_sha256$600000$UnmXwoeWO4WqbN8cqKiIHc$KZhptDyLpYT1VSfpev792OBMTI4r6jMCxpD0RICVUgk=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "mullinsdeanna",
+    "first_name": "",
+    "last_name": "",
+    "email": "james51@example.net",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-06-28T17:38:07.702Z",
+    "groups": [],
+    "user_permissions": []
   }
 },
 {
-  "model": "catalog.product",
+  "model": "auth.user",
   "pk": 7,
   "fields": {
-    "name": "Izheko",
-    "price": 250
+    "password": "pbkdf2_sha256$600000$gnqI3bTIJzAxp8Oas4rO8G$70GM51XxTWjc1AimshlU1swmz+WwtbsDSW3a+qvJkO4=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "davidramirez",
+    "first_name": "",
+    "last_name": "",
+    "email": "bsanders@example.net",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-06-28T17:38:08.181Z",
+    "groups": [],
+    "user_permissions": []
   }
 },
 {
-  "model": "catalog.product",
+  "model": "auth.user",
   "pk": 8,
   "fields": {
-    "name": "Ineo",
-    "price": 130
+    "password": "pbkdf2_sha256$600000$7grICCpTjrjEsd7j9Vm5I9$Hn6UBpqSHETfrejncVLnCtXdCzDUmgdB4PRsdM/UZuM=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "lewisjennifer",
+    "first_name": "",
+    "last_name": "",
+    "email": "annhaas@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-06-28T17:38:08.657Z",
+    "groups": [],
+    "user_permissions": []
   }
 },
 {
-  "model": "catalog.supplier",
-  "pk": 1,
+  "model": "auth.user",
+  "pk": 9,
   "fields": {
-    "name": "CASIO",
-    "city": 1
+    "password": "pbkdf2_sha256$600000$5RtMXU4t2yMwLYMCbsqAYq$uLhLToitT/qUQMSSjgZdIUA2q0bvyrreLmsNN95OKFI=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "dominic44",
+    "first_name": "",
+    "last_name": "",
+    "email": "cooknicholas@example.org",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-06-28T17:38:09.119Z",
+    "groups": [],
+    "user_permissions": []
   }
 },
 {
-  "model": "catalog.supplier",
-  "pk": 2,
+  "model": "auth.user",
+  "pk": 10,
   "fields": {
-    "name": "ZAVOD",
-    "city": 2
-  }
-},
-{
-  "model": "catalog.supplier",
-  "pk": 3,
-  "fields": {
-    "name": "SILPO",
-    "city": 3
-  }
-},
-{
-  "model": "catalog.supplier",
-  "pk": 4,
-  "fields": {
-    "name": "FOP HUDYI",
-    "city": 4
+    "password": "pbkdf2_sha256$600000$cJlwE688tcGH3FRobvSSf7$8+3yJRmrhreAsB4WEuxyLrH2VK1vPC2fkK3jegz9Fgc=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "christopher95",
+    "first_name": "",
+    "last_name": "",
+    "email": "victorsalazar@example.org",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-06-28T17:38:09.592Z",
+    "groups": [],
+    "user_permissions": []
   }
 }
 ]
