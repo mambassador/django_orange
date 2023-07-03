@@ -14,6 +14,7 @@ The mentioned features have not been implemented, but they are expected to be de
 - Calculating hypotenuse with given catheti from user input (go to http://localhost:8000/triangle)
 - Adding person to the database (go to http://localhost:8000/person)
 - Updating person (go to go to http://localhost:8000/person/<id:int>)
+- Logging request data and representing logs in admin panel for triangle app
 
 ### Usage
 
