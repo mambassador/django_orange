@@ -3,7 +3,7 @@
   "model": "triangle.person",
   "pk": 7,
   "fields": {
-    "first_name": "John",
+    "first_name": "Johnqwfw",
     "last_name": "Doe",
     "E-mail": "john@doe.com"
   }
@@ -54,183 +54,187 @@
   }
 },
 {
-  "model": "auth.user",
-  "pk": 1,
+  "model": "triangle.person",
+  "pk": 13,
   "fields": {
-    "password": "pbkdf2_sha256$600000$puJehAfZHbAEhkm8dHj2WU$2GWItJhehsoNydcDc3g/h+YVrOVv4I58kVhqku+Aa8E=",
-    "last_login": null,
-    "is_superuser": false,
-    "username": "rodriguezmichael",
-    "first_name": "",
-    "last_name": "",
-    "email": "maddenbenjamin@example.com",
-    "is_staff": false,
-    "is_active": true,
-    "date_joined": "2023-06-28T17:38:05.357Z",
-    "groups": [],
-    "user_permissions": []
+    "first_name": "John",
+    "last_name": "Doe",
+    "E-mail": "music24on7@gmail.com"
   }
 },
 {
-  "model": "auth.user",
-  "pk": 2,
+  "model": "triangle.person",
+  "pk": 14,
   "fields": {
-    "password": "pbkdf2_sha256$600000$J3q2sRRn1vlk5Xbytc1cEf$fexvRR5JbLczd8kx/hSGT7BRg6a7LOdTceRXSKlSuOM=",
-    "last_login": null,
-    "is_superuser": false,
-    "username": "ashleyhart",
-    "first_name": "",
-    "last_name": "",
-    "email": "judithyoung@example.com",
-    "is_staff": false,
-    "is_active": true,
-    "date_joined": "2023-06-28T17:38:05.821Z",
-    "groups": [],
-    "user_permissions": []
+    "first_name": "John",
+    "last_name": "Doe",
+    "E-mail": "music24onewdwe7@gmail.com"
   }
 },
 {
-  "model": "auth.user",
-  "pk": 3,
+  "model": "triangle.person",
+  "pk": 15,
   "fields": {
-    "password": "pbkdf2_sha256$600000$0JWEt73u6LFo9C20a9dwPC$iXt9MChV/MMA1+dm2QD6TlY9cCdugLDYfgKbIJrIKPY=",
-    "last_login": null,
-    "is_superuser": false,
-    "username": "mendezlisa",
-    "first_name": "",
-    "last_name": "",
-    "email": "chasenelson@example.net",
-    "is_staff": false,
-    "is_active": true,
-    "date_joined": "2023-06-28T17:38:06.295Z",
-    "groups": [],
-    "user_permissions": []
+    "first_name": "wef",
+    "last_name": "wefwe",
+    "E-mail": "wefewf2@vwrvwr.com"
   }
 },
 {
-  "model": "auth.user",
-  "pk": 4,
+  "model": "triangle.person",
+  "pk": 16,
   "fields": {
-    "password": "pbkdf2_sha256$600000$LemCGd7SNhZd8SnNKMqZCv$TFCG32Fz2i4awDLxNqwja76gwizoqLRS7W8cISxEVGk=",
-    "last_login": null,
-    "is_superuser": false,
-    "username": "kenneth57",
-    "first_name": "",
-    "last_name": "",
-    "email": "harveyjeanne@example.com",
-    "is_staff": false,
-    "is_active": true,
-    "date_joined": "2023-06-28T17:38:06.767Z",
-    "groups": [],
-    "user_permissions": []
+    "first_name": "asfsd",
+    "last_name": "varv",
+    "E-mail": "wefwaefwe@gmail.com"
   }
 },
 {
-  "model": "auth.user",
-  "pk": 5,
+  "model": "triangle.log",
+  "pk": 58,
   "fields": {
-    "password": "pbkdf2_sha256$600000$Kzv0wHlAPXvfGEuPHmYyhp$hE0AV3MnEYCgP3NHKla2v5+XrN7Mo9XpeynC+DRbRgg=",
-    "last_login": null,
-    "is_superuser": false,
-    "username": "estout",
-    "first_name": "",
-    "last_name": "",
-    "email": "holmesleslie@example.net",
-    "is_staff": false,
-    "is_active": true,
-    "date_joined": "2023-06-28T17:38:07.233Z",
-    "groups": [],
-    "user_permissions": []
+    "path": "/triangle/",
+    "method": "GET",
+    "timestamp": "2023-07-03T12:44:27.415Z",
+    "request_data": {
+      "cathetus_1": "124",
+      "cathetus_2": "234"
+    },
+    "status_code": 200,
+    "user": "ZAVODSHOP"
   }
 },
 {
-  "model": "auth.user",
-  "pk": 6,
+  "model": "triangle.log",
+  "pk": 59,
   "fields": {
-    "password": "pbkdf2_sha256$600000$UnmXwoeWO4WqbN8cqKiIHc$KZhptDyLpYT1VSfpev792OBMTI4r6jMCxpD0RICVUgk=",
-    "last_login": null,
-    "is_superuser": false,
-    "username": "mullinsdeanna",
-    "first_name": "",
-    "last_name": "",
-    "email": "james51@example.net",
-    "is_staff": false,
-    "is_active": true,
-    "date_joined": "2023-06-28T17:38:07.702Z",
-    "groups": [],
-    "user_permissions": []
+    "path": "/triangle/",
+    "method": "GET",
+    "timestamp": "2023-07-03T12:44:31.879Z",
+    "request_data": {
+      "cathetus_1": "12424",
+      "cathetus_2": "234"
+    },
+    "status_code": 200,
+    "user": "ZAVODSHOP"
   }
 },
 {
-  "model": "auth.user",
-  "pk": 7,
+  "model": "triangle.log",
+  "pk": 60,
   "fields": {
-    "password": "pbkdf2_sha256$600000$gnqI3bTIJzAxp8Oas4rO8G$70GM51XxTWjc1AimshlU1swmz+WwtbsDSW3a+qvJkO4=",
-    "last_login": null,
-    "is_superuser": false,
-    "username": "davidramirez",
-    "first_name": "",
-    "last_name": "",
-    "email": "bsanders@example.net",
-    "is_staff": false,
-    "is_active": true,
-    "date_joined": "2023-06-28T17:38:08.181Z",
-    "groups": [],
-    "user_permissions": []
+    "path": "/triangle/",
+    "method": "GET",
+    "timestamp": "2023-07-03T12:44:32.364Z",
+    "request_data": {},
+    "status_code": 200,
+    "user": "ZAVODSHOP"
   }
 },
 {
-  "model": "auth.user",
-  "pk": 8,
+  "model": "triangle.log",
+  "pk": 61,
   "fields": {
-    "password": "pbkdf2_sha256$600000$7grICCpTjrjEsd7j9Vm5I9$Hn6UBpqSHETfrejncVLnCtXdCzDUmgdB4PRsdM/UZuM=",
-    "last_login": null,
-    "is_superuser": false,
-    "username": "lewisjennifer",
-    "first_name": "",
-    "last_name": "",
-    "email": "annhaas@example.com",
-    "is_staff": false,
-    "is_active": true,
-    "date_joined": "2023-06-28T17:38:08.657Z",
-    "groups": [],
-    "user_permissions": []
+    "path": "/peron",
+    "method": "GET",
+    "timestamp": "2023-07-03T12:44:39.530Z",
+    "request_data": {},
+    "status_code": 404,
+    "user": "ZAVODSHOP"
   }
 },
 {
-  "model": "auth.user",
-  "pk": 9,
+  "model": "triangle.log",
+  "pk": 62,
   "fields": {
-    "password": "pbkdf2_sha256$600000$5RtMXU4t2yMwLYMCbsqAYq$uLhLToitT/qUQMSSjgZdIUA2q0bvyrreLmsNN95OKFI=",
-    "last_login": null,
-    "is_superuser": false,
-    "username": "dominic44",
-    "first_name": "",
-    "last_name": "",
-    "email": "cooknicholas@example.org",
-    "is_staff": false,
-    "is_active": true,
-    "date_joined": "2023-06-28T17:38:09.119Z",
-    "groups": [],
-    "user_permissions": []
+    "path": "/person/",
+    "method": "GET",
+    "timestamp": "2023-07-03T12:44:42.376Z",
+    "request_data": {},
+    "status_code": 200,
+    "user": "ZAVODSHOP"
   }
 },
 {
-  "model": "auth.user",
-  "pk": 10,
+  "model": "triangle.log",
+  "pk": 64,
   "fields": {
-    "password": "pbkdf2_sha256$600000$cJlwE688tcGH3FRobvSSf7$8+3yJRmrhreAsB4WEuxyLrH2VK1vPC2fkK3jegz9Fgc=",
-    "last_login": null,
-    "is_superuser": false,
-    "username": "christopher95",
-    "first_name": "",
-    "last_name": "",
-    "email": "victorsalazar@example.org",
-    "is_staff": false,
-    "is_active": true,
-    "date_joined": "2023-06-28T17:38:09.592Z",
-    "groups": [],
-    "user_permissions": []
+    "path": "/person/",
+    "method": "POST",
+    "timestamp": "2023-07-03T12:45:08.963Z",
+    "request_data": {
+      "csrfmiddlewaretoken": "hAqNiALYPJpAEGAQjkv2rgHzcoZdNpIfqXCGo38QV4ItIoxv0VtauOrODwhVWD2y",
+      "first_name": "asfsd",
+      "last_name": "varv",
+      "E-mail": "wefwaefwe@gmail.com"
+    },
+    "status_code": 302,
+    "user": "ZAVODSHOP"
+  }
+},
+{
+  "model": "triangle.log",
+  "pk": 65,
+  "fields": {
+    "path": "/person/registered/",
+    "method": "GET",
+    "timestamp": "2023-07-03T12:45:08.971Z",
+    "request_data": {},
+    "status_code": 200,
+    "user": "ZAVODSHOP"
+  }
+},
+{
+  "model": "triangle.log",
+  "pk": 66,
+  "fields": {
+    "path": "/person/123",
+    "method": "GET",
+    "timestamp": "2023-07-03T12:45:23.078Z",
+    "request_data": {},
+    "status_code": 404,
+    "user": "ZAVODSHOP"
+  }
+},
+{
+  "model": "triangle.log",
+  "pk": 67,
+  "fields": {
+    "path": "/person/8",
+    "method": "GET",
+    "timestamp": "2023-07-03T12:45:26.683Z",
+    "request_data": {},
+    "status_code": 200,
+    "user": "ZAVODSHOP"
+  }
+},
+{
+  "model": "triangle.log",
+  "pk": 68,
+  "fields": {
+    "path": "/person/8",
+    "method": "POST",
+    "timestamp": "2023-07-03T12:45:28.686Z",
+    "request_data": {
+      "csrfmiddlewaretoken": "2jOJjofcVr9f6sQwgxKTmQvQjtbkf960bG0CpRC41Ms8aaNbX8I1pof5KBt2onqj",
+      "first_name": "Jack",
+      "last_name": "West",
+      "E-mail": "jack@west.com"
+    },
+    "status_code": 302,
+    "user": "ZAVODSHOP"
+  }
+},
+{
+  "model": "triangle.log",
+  "pk": 69,
+  "fields": {
+    "path": "/person/edited/",
+    "method": "GET",
+    "timestamp": "2023-07-03T12:45:28.693Z",
+    "request_data": {},
+    "status_code": 200,
+    "user": "ZAVODSHOP"
   }
 }
 ]
