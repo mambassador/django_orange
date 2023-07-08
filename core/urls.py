@@ -15,6 +15,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from django.conf import settings
 from django.urls import include, path
 
 from triangle.views import create_person, edited, registered, update_person
@@ -27,3 +28,9 @@ urlpatterns = [
     path("person/registered/", registered, name="registered"),
     path("person/edited/", edited, name="edited"),
 ]
+
+
+if settings.DEBUG:
+    urlpatterns += [
+        path("__debug__/", include("debug_toolbar.urls")),
+    ]

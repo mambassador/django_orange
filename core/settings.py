@@ -27,7 +27,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["127.0.0.1", "localhost"]
 
-
+INTERNAL_IPS = [
+    "127.0.0.1",
+    "localhost"
+]
 # Application definition
 
 INSTALLED_APPS = [
@@ -38,10 +41,17 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "django_extensions",
+
     "triangle",
     "catalog",
     "users",
 ]
+
+if DEBUG:
+    INSTALLED_APPS += [
+        "debug_toolbar"
+    ]
+
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -53,6 +63,11 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "triangle.middlewares.LogMiddleware",
 ]
+
+if DEBUG:
+    MIDDLEWARE += [
+        "debug_toolbar.middleware.DebugToolbarMiddleware",
+    ]
 
 ROOT_URLCONF = "core.urls"
 
