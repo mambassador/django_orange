@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><title>{% block title %}{{ watch.name }}{% endblock %}</title>
+</head>
+<body>
+    {% block content %}
+    <p><a href="{% url 'watches:watches' %}"><- Back to Watches</a></p>
+
+    <h1>Watch Detail</h1>
+    <h2>Model: {{ watch.name }}</h2>
+    <p><strong>Brand: </strong><a href="{% url 'watches:brand-detail' watch.brand.pk %}">{{ watch.brand.name }}</a></p>
+    <p><strong>Designer: </strong><a href="{% url 'watches:designer-detail' watch.designer.pk %}">{{ watch.designer.name }}</a></p>
+    <p><strong>Colour: </strong>{{ watch.colour }}</p>
+    <p><strong>Size: </strong>{{ watch.size }}</p>
+    <p><strong>Price: </strong>{{ watch.price }}</p>
+
+    <h2>Stores:</h2>
+    <ul>
+    {% for store in object.store_set.all %}
+        <li><a href="{% url 'watches:store-detail' store.pk %}">{{ store.name }}</a></li>
+    {% endfor %}
+    </ul>
+
+    {% endblock %}
+</body>
+</html>

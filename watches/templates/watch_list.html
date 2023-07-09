@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><title>{% block title %}All Watches{% endblock %}</title>
+</head>
+<body>
+    {% block content %}
+
+    <h1>All Watches</h1>
+    <h3>Total number of watches: {{ total_count }}</h3>
+    {% if watch_list %}
+    <table class="content-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Brand</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for watch in watch_list %}
+                <tr>
+                    <td><a href="{% url 'watches:watch-detail' watch.pk %}">{{ watch.name }}</a></td>
+                    <td>{{ watch.brand }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    {% else %}
+    <p>There are no watches.</p>
+    {% endif %}
+
+    {% endblock %}
+</body>
+</html>

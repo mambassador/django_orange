@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "triangle",
     "catalog",
     "users",
+    "watches",
 ]
 
 if DEBUG:
