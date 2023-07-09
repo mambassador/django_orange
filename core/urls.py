@@ -27,6 +27,7 @@ urlpatterns = [
     path("person/<int:pk>", update_person, name="update-person"),
     path("person/registered/", registered, name="registered"),
     path("person/edited/", edited, name="edited"),
+    path("watches/", include("watches.urls")),
 ]
 
 

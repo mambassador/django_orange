@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Watch Business{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <ul>
+                <li><a href="{% url 'watches:index' %}">Home</a></li>
+                <li><a href="{% url 'watches:designers' %}">All Designers</a></li>
+                <li><a href="{% url 'watches:brands' %}">All Brands</a></li>
+                <li><a href="{% url 'watches:watches' %}">All Watches</a></li>
+                <li><a href="{% url 'watches:stores' %}">All Stores</a></li>
+            </ul>
+
+        </div>
+        <div class="content">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+</body>
+</html>

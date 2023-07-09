@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><title>{% block title %}All Stores{% endblock %}</title>
+</head>
+<body>
+    {% block content %}
+
+    <h1>All Stores</h1>
+    <h3>Total number of stores: {{ total_count }}</h3>
+    {% if store_list %}
+    <table class="content-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for store in store_list %}
+                <tr>
+                   <td><a href="{% url 'watches:store-detail' store.pk %}">{{ store.name }}</a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    {% else %}
+    <p>There are no stores.</p>
+    {% endif %}
+
+    {% endblock %}
+</body>
+</html>

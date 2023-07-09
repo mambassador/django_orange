@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><title>{% block title %}All Brands{% endblock %}</title>
+</head>
+<body>
+    {% block content %}
+
+    <h1>All Brands</h1>
+    <h3>Total number of brands: {{ total_count }}</h3>
+    {% if brand_list %}
+    <table class="content-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Country</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for brand in brand_list %}
+                <tr>
+                    <td><a href="{% url 'watches:brand-detail' brand.pk %}">{{ brand.name }}</a></td>
+                    <td>{{ brand.country }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p>There are no brands.</p>
+    {% endif %}
+    {% endblock %}
+</body>
+</html>

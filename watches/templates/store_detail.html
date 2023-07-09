@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><title>{% block title %}{{ store.name }}{% endblock %}</title>
+</head>
+<body>
+    {% block content %}
+
+    <p><a href="{% url 'watches:stores' %}"><- Back to Stores</a></p>
+
+    <h1>Store Detail</h1>
+    <h2>Name: {{ object.name }}</h2>
+    <p><strong>Watches:</strong></p>
+    <ul>
+        {% for watch in object.watches.all %}
+            <li><a href="{% url 'watches:watch-detail' watch.pk %}">{{ watch.name }}</a></li>
+        {% endfor %}
+    </ul>
+
+    <h2>Brands:</h2>
+    <table class="content-table">
+        <thead>
+            <tr>
+                <th>Brand</th>
+                <th>Watches for Sale</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for brand in brands %}
+                <tr>
+                    <td><a href="{% url 'watches:brand-detail' brand.brand__pk %}">{{ brand.brand__name }}</a></td>
+                    <td>{{ brand.count }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    {% endblock %}
+</body>
+</html>

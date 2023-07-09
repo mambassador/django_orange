@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{{ brand.name }}{% endblock %}
+</title>
+</head>
+<body>
+    {% block content %}
+        <p><a href="{% url 'watches:brands' %}"><- Back to Brands</a></p>
+
+        <h1>Brand Detail</h1>
+        <h2>Name: {{ brand.name }}</h2>
+        <p><strong>Country:</strong>{{ brand.country }}</p>
+
+    <h2>Watches:</h2>
+    <table class="content-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+              <th>Designer</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for watch in related_watches %}
+            <tr>
+                <td><a href="{% url 'watches:watch-detail' watch.pk %}">{{ watch.name }}</a></td>
+                <td>{{ watch.price }}</td>
+                <td><a href="{% url 'watches:designer-detail' watch.designer.pk %}">{{ watch.designer.name }}</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <h2>Stores:</h2>
+    <table class="content-table">
+        <thead>
+            <tr>
+                <th>Store</th>
+                <th>Watches for sale</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for store in related_stores %}
+                <tr>
+                    <td><a href="{% url 'watches:store-detail' store.pk %}">{{ store.name }}</a></td>
+                    <td>{{ store.watch_count }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    {% endblock %}
+</body>
+</html>
