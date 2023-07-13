@@ -5,17 +5,21 @@ from django.utils import timezone
 class EmailNotificationForm(forms.Form):
     """Form for creating e-mail notification"""
 
-    to_email = forms.EmailField(label="E-mail address",
-                                widget=forms.EmailInput(attrs={"autocomplete": 'new-email',
-                                                               "placeholder": "Enter e-mail"}))
+    to_email = forms.EmailField(
+        label="E-mail address",
+        widget=forms.EmailInput(attrs={"autocomplete": "new-email", "placeholder": "Enter e-mail"}),
+    )
 
-    message = forms.CharField(max_length=1000,
-                              label="Message",
-                              widget=forms.TextInput(attrs={"autocomplete": "off" + "always",
-                                                            "placeholder": "Enter the text"}))
+    message = forms.CharField(
+        max_length=1000,
+        label="Message",
+        widget=forms.TextInput(attrs={"autocomplete": "off" + "always", "placeholder": "Enter the text"}),
+    )
 
-    send_time = forms.DateTimeField(label="Send time",
-                                    widget=forms.DateTimeInput(attrs={"autocomplete": "on"}))
+    send_time = forms.DateTimeField(
+        label="Send time",
+        widget=forms.DateTimeInput(attrs={"autocomplete": "on"}),
+    )
 
     def clean_send_time(self):
         """Cleans and validates the send time
