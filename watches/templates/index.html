@@ -8,7 +8,9 @@
 <body>
     {% block content %}
         <h1>Welcome your Watch Business Empire!</h1>
-        <!-- Additional content for the index page -->
+        <br><a href="{% url 'users:email-notification' %}">Send e-mail notification</a></br>
+        <br><a href="{% url 'triangle:calc-hypo' %}">Calculate hypotenuse</a></br>
+        <br><a href="{% url 'create-person' %}">Create person</a></br>
     {% endblock %}
 </body>
 </html>

@@ -28,6 +28,7 @@ urlpatterns = [
     path("person/registered/", registered, name="registered"),
     path("person/edited/", edited, name="edited"),
     path("watches/", include("watches.urls")),
+    path("notification/", include("users.urls")),
 ]
 
 

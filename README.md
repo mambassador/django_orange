@@ -5,6 +5,16 @@ This repository contains a simple Django project created for educational purpose
 
 The project only includes a single Django applications: "watches", "catalog", "triangle", "users"
 
+### Various features
+
+- Sending notification emails at specified time (go to http://localhost:8000/notification)(You will need to run RabbitMQ to do this)
+- Creating a specified amount of mock users with custom management CLI command
+- Deleting users from the database with custom management CLI command
+- Calculating hypotenuse with given catheti from user input (go to http://localhost:8000/triangle)
+- Adding person to the database (go to http://localhost:8000/person)
+- Updating person (go to http://localhost:8000/person/<id:int>)
+- Logging request data and representing logs in admin panel for triangle app
+
 # Watches
 
 ### Setting up the project
@@ -57,14 +67,7 @@ python manage.py loaddata fixtures.json
 ```
 - Go to http://127.0.0.1:8000/watches/ to use the app
 
-#### Other features
 
-- Creating a specified amount of mock users with custom management CLI command
-- Deleting users from the database with custom management CLI command
-- Calculating hypotenuse with given catheti from user input (go to http://localhost:8000/triangle)
-- Adding person to the database (go to http://localhost:8000/person)
-- Updating person (go to go to http://localhost:8000/person/<id:int>)
-- Logging request data and representing logs in admin panel for triangle app
 
 #### Usage
 
