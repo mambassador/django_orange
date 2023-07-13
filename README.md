@@ -7,7 +7,7 @@ The project only includes a single Django applications: "watches", "catalog", "t
 
 ### Various features
 
-- Sending notification emails at specified time (go to http://localhost:8000/notification)
+- Sending notification emails at specified time (go to http://localhost:8000/notification)(You will need to run RabbitMQ to do this)
 - Creating a specified amount of mock users with custom management CLI command
 - Deleting users from the database with custom management CLI command
 - Calculating hypotenuse with given catheti from user input (go to http://localhost:8000/triangle)
