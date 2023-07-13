@@ -1,0 +1,56 @@
+.form-label {
+    display: flex;
+    min-width: 150px;
+    font-size: 18px;
+
+}
+
+.form-error ul{
+    list-style: none;
+    padding: 0;
+    color: #CC0000;
+    font-size: 13px;
+    margin-top: -12px;
+}
+
+.form-button {
+    margin-top: 25px;
+    min-width: 300px;
+    min-height: 35px;
+    font-size: 18px;
+    border: 2px solid #1b1b1b;
+    border-radius: 5px;
+
+
+}
+
+input[type="text"],
+input[type="email"] {
+    display: flex;
+    min-width: 289px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    margin-top: 85px;
+    text-align: center;
+
+}
+
+.form{
+    display: inline-table;
+    border: 5px solid #666666;
+    border-radius: 5px;
+    padding: 20px;
+}
