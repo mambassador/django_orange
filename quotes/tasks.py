@@ -83,7 +83,7 @@ def scrape():
         )
 
 
-def get_author_detail(author_link):
+def get_author_detail(author_link: str) -> dict:
     """Returns author details from the author's page
 
     Args:

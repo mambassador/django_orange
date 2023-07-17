@@ -3,10 +3,16 @@ This repository contains a simple Django project created for educational purpose
 
 ### Description
 
-The project only includes a single Django applications: "watches", "catalog", "triangle", "users"
+The project only includes a single Django applications: 
+- "quotes"
+- "watches"
+- "catalog"
+- "triangle"
+- "users"
 
 ### Various features
 
+- Scraping quotes every odd hour and sent e-mail if all quotes are scraped
 - Sending notification emails at specified time (go to http://localhost:8000/notification)(You will need to run RabbitMQ to do this)
 - Creating a specified amount of mock users with custom management CLI command
 - Deleting users from the database with custom management CLI command
