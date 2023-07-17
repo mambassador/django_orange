@@ -34,7 +34,7 @@ def scrape():
     next_button = pager.find("li", class_="next")
 
     page_count = 0
-    quotes_count = 0
+    quotes_counter = 0
 
     while next_button in pager:
         r = requests.get(link + f"/page/{page_count + 1}")
@@ -49,7 +49,7 @@ def scrape():
         quotes = soup.find_all("div", class_="quote")
 
         for quote in quotes:
-            if quotes_count >= 5:
+            if quotes_counter >= 5:
                 break
 
             quote_detail = dict()
@@ -73,9 +73,9 @@ def scrape():
             quote_obj = Quote(text=quote_detail["text"], author=author)
             quote_obj.save()
 
-            quotes_count += 1
+            quotes_counter += 1
 
-    if quotes_count in range(1, 5):
+    if quotes_counter == 0:
         send_notification_mail(
             ["noreply@mail.com"],
             "All quotes are scraped, waiting for new quotes",
