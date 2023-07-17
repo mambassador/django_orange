@@ -75,7 +75,7 @@ def scrape():
 
             quotes_count += 1
 
-    if quotes_count in range(1, 5):
+    if quotes_count == 0:
         send_notification_mail(
             ["noreply@mail.com"],
             "All quotes are scraped, waiting for new quotes",
