@@ -122,4 +122,3 @@ def get_author_detail(author_link):
 
 if __name__ == "__main__":
     scrape()
-
