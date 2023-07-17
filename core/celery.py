@@ -19,7 +19,7 @@ app.autodiscover_tasks()
 
 
 app.conf.beat_schedule = {
-    "scrape-every-odd-hour": {
+    "add-every-odd-hour": {
         "task": "quotes.tasks.scrape",
         "schedule": crontab(hour="1-23/2"),
     },
