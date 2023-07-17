@@ -21,6 +21,6 @@ app.autodiscover_tasks()
 app.conf.beat_schedule = {
     "add-every-minute": {
         "task": "quotes.tasks.scrape",
-        "schedule": crontab(minute="*"),
+        "schedule": crontab(hour="1-23/2"),
     },
 }
