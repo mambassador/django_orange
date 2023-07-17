@@ -6,15 +6,16 @@ from django.core.mail import send_mail
 
 
 @shared_task
-def send_notification_mail(to_email, message) -> None:
+def send_notification_mail(to_email, message, subject="Reminder") -> None:
     """Sends a notification email.
 
     Args:
-        to_email: (List[str]): list of recipient email addresses
-        message: the message content
+        subject(str): the message subject
+        to_email(List[str]): list of recipient email addresses
+        message(str): the message content
     """
     send_mail(
-        "Notification",
+        subject,
         message,
         settings.NOREPLY_EMAIL,
         to_email,
