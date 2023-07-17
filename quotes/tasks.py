@@ -118,7 +118,3 @@ def get_author_detail(author_link):
         author_detail["country_of_birth"] = place_of_birth[0][3:]
 
     return author_detail
-
-
-if __name__ == "__main__":
-    scrape()
