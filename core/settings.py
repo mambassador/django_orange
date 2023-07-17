@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     "catalog",
     "users",
     "watches",
+    "quotes",
 ]
 
 if DEBUG:
