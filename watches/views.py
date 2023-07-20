@@ -94,6 +94,7 @@ class WatchDetailView(generic.DetailView):
 
 class WatchCreateView(LoginRequiredMixin, generic.CreateView):
     """Creates a new watch instance"""
+
     model = Watch
     template_name_suffix = "_create_form"
     fields = ["name", "price", "designer", "brand", "colour", "size"]
@@ -102,6 +103,7 @@ class WatchCreateView(LoginRequiredMixin, generic.CreateView):
 
 class WatchUpdateView(LoginRequiredMixin, generic.UpdateView):
     """Updates an existing watch instance"""
+
     model = Watch
     template_name_suffix = "_update_form"
     fields = ["name", "price", "designer", "brand", "colour", "size"]
@@ -113,6 +115,7 @@ class WatchUpdateView(LoginRequiredMixin, generic.UpdateView):
 
 class WatchDeleteView(LoginRequiredMixin, generic.DeleteView):
     """Deletes an existing watch instance"""
+
     model = Watch
     success_url = reverse_lazy("watches:watches")
 
