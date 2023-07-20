@@ -1,0 +1,77 @@
+/* Apply a general reset to remove default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style the container to center the content */
+.container {
+    display: flex;
+    flex-direction: column; /* Set the flex-direction to column */
+    align-items: center; /* Center items horizontally within the container */
+    height: 100vh;
+    margin-top: 75px;
+}
+
+/* Style the heading container to add spacing */
+.heading-container {
+    margin-bottom: 20px;
+}
+
+/* Style the form container to add some spacing between elements */
+.form-container {
+    width: 300px; /* Adjust the width as needed */
+    padding: 4px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column; /* Set the flex-direction to column */
+    align-items: center; /* Center form items horizontally within the container */
+}
+
+/* Vertically align form labels and inputs */
+.form p {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+/* Style the form labels */
+.form-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Style the form input fields */
+.form input[type="text"],
+.form select {
+    padding: 4px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+/* Style the form error messages */
+.form-error {
+    color: red;
+    font-size: 12px;
+    margin-top: -7px;
+    margin-bottom: 10px;
+}
+
+/* Style the form button */
+.form-button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 4px 15px;
+    cursor: pointer;
+}
+
+/* Add some spacing between the button and other form elements */
+.form button {
+    margin-top: 10px;
+}

@@ -20,7 +20,10 @@ from django.urls import include, path
 
 from triangle.views import create_person, edited, registered, update_person
 
+from watches.views import index
+
 urlpatterns = [
+    path("", index, name="home"),
     path("admin/", admin.site.urls),
     path("triangle/", include("triangle.urls")),
     path("person/", create_person, name="create-person"),
