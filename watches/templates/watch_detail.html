@@ -1,9 +1,12 @@
 {% extends 'base.html' %}
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title><title>{% block title %}{{ watch.name }}{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'watches/css/styles.css' %}"/>
 </head>
 <body>
     {% block content %}
@@ -23,6 +26,8 @@
         <li><a href="{% url 'watches:store-detail' store.pk %}">{{ store.name }}</a></li>
     {% endfor %}
     </ul>
+    <p><a class="button" href="{% url 'watches:update-watch' watch.pk %}">Update Watch</a>
+    <a class="button" href="{% url 'watches:delete-watch' watch.pk %}">Delete watch</a></p>
 
     {% endblock %}
 </body>

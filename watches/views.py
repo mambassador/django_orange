@@ -1,6 +1,8 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.db.models import Count, Prefetch
 from django.shortcuts import render
-from django.views.generic import DetailView, ListView
+from django.urls import reverse_lazy
+from django.views import generic
 
 from watches.models import Brand, Designer, Store, Watch
 
@@ -10,7 +12,8 @@ def index(request):
     return render(request, "index.html")
 
 
-class DesignerListView(ListView):
+class DesignerListView(generic.ListView):
+    paginate_by = 12
     model = Designer
     template_name = "designer_list.html"
     queryset = Designer.objects.all()
@@ -22,7 +25,7 @@ class DesignerListView(ListView):
         return context
 
 
-class DesignerDetailView(DetailView):
+class DesignerDetailView(generic.DetailView):
     model = Designer
     template_name = "designer_detail.html"
     queryset = Designer.objects.prefetch_related("watch_set__brand")
@@ -35,7 +38,8 @@ class DesignerDetailView(DetailView):
         return context
 
 
-class BrandListView(ListView):
+class BrandListView(generic.ListView):
+    paginate_by = 12
     model = Designer
     template_name = "brand_list.html"
     queryset = Brand.objects.all()
@@ -47,7 +51,7 @@ class BrandListView(ListView):
         return context
 
 
-class BrandDetailView(DetailView):
+class BrandDetailView(generic.DetailView):
     model = Brand
     template_name = "brand_detail.html"
     queryset = Brand.objects.prefetch_related(
@@ -68,10 +72,11 @@ class BrandDetailView(DetailView):
         return context
 
 
-class WatchListView(ListView):
+class WatchListView(generic.ListView):
+    paginate_by = 12
     model = Watch
     template_name = "watch_list.html"
-    queryset = Watch.objects.select_related("brand")
+    queryset = Watch.objects.select_related("brand").order_by("-pk")
 
     def get_context_data(self, **kwargs) -> dict:
         """Adds the total count of watches to the context"""
@@ -80,13 +85,36 @@ class WatchListView(ListView):
         return context
 
 
-class WatchDetailView(DetailView):
+class WatchDetailView(generic.DetailView):
     model = Watch
     template_name = "watch_detail.html"
     queryset = Watch.objects.select_related("brand", "designer").prefetch_related("store_set")
 
 
-class StoreListView(ListView):
+class WatchCreateView(LoginRequiredMixin, generic.CreateView):
+    model = Watch
+    template_name_suffix = "_create_form"
+    fields = ["name", "price", "designer", "brand", "colour", "size"]
+    success_url = reverse_lazy("watches:watches")
+
+
+class WatchUpdateView(LoginRequiredMixin, generic.UpdateView):
+    model = Watch
+    template_name_suffix = "_update_form"
+    fields = ["name", "price", "designer", "brand", "colour", "size"]
+
+    def get_success_url(self):
+        watch_pk = self.object.pk
+        return reverse_lazy("watches:watch-detail", kwargs={"pk": watch_pk})
+
+
+class WatchDeleteView(LoginRequiredMixin, generic.DeleteView):
+    model = Watch
+    success_url = reverse_lazy("watches:watches")
+
+
+class StoreListView(generic.ListView):
+    paginate_by = 12
     model = Store
     template_name = "store_list.html"
     queryset = Store.objects.all()
@@ -98,7 +126,7 @@ class StoreListView(ListView):
         return context
 
 
-class StoreDetailView(DetailView):
+class StoreDetailView(generic.DetailView):
     model = Store
     template_name = "store_detail.html"
 
