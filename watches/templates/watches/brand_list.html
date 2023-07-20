@@ -1,34 +1,35 @@
-{% extends 'base.html' %}
+{% extends 'watches/base.html' %}
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title><title>{% block title %}All Designers{% endblock %}</title>
+    <title>{% block title %}All Brands{% endblock %}</title>
 </head>
 <body>
     {% block content %}
 
-    <h1>All Designers</h1>
-    <h3>Total number of designer: {{ total_count }}</h3>
-    {% if designer_list %}
+    <h1>All Brands</h1>
+    <h3>Total number of brands: {{ total_count }}</h3>
+    {% if brand_list %}
     <table class="content-table">
         <thead>
             <tr>
                 <th>Name</th>
+                <th>Country</th>
             </tr>
         </thead>
         <tbody>
-            {% for designer in designer_list %}
+            {% for brand in page_obj %}
                 <tr>
-                    <td><a href="{% url 'watches:designer-detail' designer.pk %}">{{ designer.name }}</a></td>
+                    <td><a href="{% url 'watches:brand-detail' brand.pk %}">{{ brand.name }}</a></td>
+                    <td>{{ brand.country }}</td>
                 </tr>
             {% endfor %}
         </tbody>
     </table>
-
     {% else %}
-    <p>There are no designers.</p>
+    <p>There are no brands.</p>
     {% endif %}
 
     <br><div class="pagination">

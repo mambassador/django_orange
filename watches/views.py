@@ -9,13 +9,13 @@ from watches.models import Brand, Designer, Store, Watch
 
 def index(request):
     """Renders the index page"""
-    return render(request, "index.html")
+    return render(request, "watches/index.html")
 
 
 class DesignerListView(generic.ListView):
     paginate_by = 12
     model = Designer
-    template_name = "designer_list.html"
+    template_name = "watches/designer_list.html"
     queryset = Designer.objects.all()
 
     def get_context_data(self, **kwargs) -> dict:
@@ -27,7 +27,7 @@ class DesignerListView(generic.ListView):
 
 class DesignerDetailView(generic.DetailView):
     model = Designer
-    template_name = "designer_detail.html"
+    template_name = "watches/designer_detail.html"
     queryset = Designer.objects.prefetch_related("watch_set__brand")
 
     def get_context_data(self, **kwargs) -> dict:
@@ -41,7 +41,7 @@ class DesignerDetailView(generic.DetailView):
 class BrandListView(generic.ListView):
     paginate_by = 12
     model = Designer
-    template_name = "brand_list.html"
+    template_name = "watches/brand_list.html"
     queryset = Brand.objects.all()
 
     def get_context_data(self, **kwargs) -> dict:
@@ -53,7 +53,7 @@ class BrandListView(generic.ListView):
 
 class BrandDetailView(generic.DetailView):
     model = Brand
-    template_name = "brand_detail.html"
+    template_name = "watches/brand_detail.html"
     queryset = Brand.objects.prefetch_related(
         "watch_set__designer",
         Prefetch("watch_set__store_set", queryset=Store.objects.only("name", "pk")),
@@ -75,7 +75,7 @@ class BrandDetailView(generic.DetailView):
 class WatchListView(generic.ListView):
     paginate_by = 12
     model = Watch
-    template_name = "watch_list.html"
+    template_name = "watches/watch_list.html"
     queryset = Watch.objects.select_related("brand").order_by("-pk")
 
     def get_context_data(self, **kwargs) -> dict:
@@ -87,7 +87,7 @@ class WatchListView(generic.ListView):
 
 class WatchDetailView(generic.DetailView):
     model = Watch
-    template_name = "watch_detail.html"
+    template_name = "watches/watch_detail.html"
     queryset = Watch.objects.select_related("brand", "designer").prefetch_related("store_set")
 
 
@@ -116,7 +116,7 @@ class WatchDeleteView(LoginRequiredMixin, generic.DeleteView):
 class StoreListView(generic.ListView):
     paginate_by = 12
     model = Store
-    template_name = "store_list.html"
+    template_name = "watches/store_list.html"
     queryset = Store.objects.all()
 
     def get_context_data(self, **kwargs) -> dict:
@@ -128,7 +128,7 @@ class StoreListView(generic.ListView):
 
 class StoreDetailView(generic.DetailView):
     model = Store
-    template_name = "store_detail.html"
+    template_name = "watches/store_detail.html"
 
     def get_context_data(self, **kwargs) -> dict:
         """Adds related brands to the context"""
