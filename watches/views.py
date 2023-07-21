@@ -2,9 +2,8 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.db.models import Count, Prefetch
 from django.shortcuts import render
 from django.urls import reverse_lazy
-from django.views import generic
 from django.utils.decorators import method_decorator
-
+from django.views import generic
 from django.views.decorators.cache import cache_page
 
 from watches.models import Brand, Designer, Store, Watch
