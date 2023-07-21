@@ -3,7 +3,9 @@ from django.db.models import Count, Prefetch
 from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views import generic
+from django.utils.decorators import method_decorator
 
+from django.views.decorators.cache import cache_page
 
 from watches.models import Brand, Designer, Store, Watch
 
@@ -14,10 +16,15 @@ def index(request):
 
 
 class DesignerListView(generic.ListView):
-    paginate_by = 12
+    paginate_by = 2500
     model = Designer
     template_name = "watches/designer_list.html"
-    queryset = Designer.objects.all()
+    queryset = Designer.objects.all().annotate(watch_count=Count("watch"))
+
+    @method_decorator(cache_page(60))
+    def get(self, request, *args, **kwargs):
+        """Handles GET request"""
+        return super(DesignerListView, self).get(request, args, kwargs)
 
     def get_context_data(self, **kwargs) -> dict:
         """Adds the total count of designers to the context"""
@@ -40,10 +47,15 @@ class DesignerDetailView(generic.DetailView):
 
 
 class BrandListView(generic.ListView):
-    paginate_by = 12
+    paginate_by = 4000
     model = Designer
     template_name = "watches/brand_list.html"
-    queryset = Brand.objects.all()
+    queryset = Brand.objects.annotate(designer_count=Count("watch__designer"))
+
+    @method_decorator(cache_page(60))
+    def get(self, request, *args, **kwargs):
+        """Handles GET request"""
+        return super(BrandListView, self).get(request, args, kwargs)
 
     def get_context_data(self, **kwargs) -> dict:
         """Adds the total count of brands to the context"""
@@ -74,10 +86,15 @@ class BrandDetailView(generic.DetailView):
 
 
 class WatchListView(generic.ListView):
-    paginate_by = 12
+    paginate_by = 16000
     model = Watch
     template_name = "watches/watch_list.html"
-    queryset = Watch.objects.select_related("brand").order_by("-pk")
+    queryset = Watch.objects.select_related("brand").annotate(store_count=Count("store")).order_by("-pk")
+
+    @method_decorator(cache_page(60))
+    def get(self, request, *args, **kwargs):
+        """Handles GET request"""
+        return super(WatchListView, self).get(request, args, kwargs)
 
     def get_context_data(self, **kwargs) -> dict:
         """Adds the total count of watches to the context"""
@@ -121,7 +138,7 @@ class WatchDeleteView(LoginRequiredMixin, generic.DeleteView):
 
 
 class StoreListView(generic.ListView):
-    paginate_by = 12
+    paginate_by = 120
     model = Store
     template_name = "watches/store_list.html"
     queryset = Store.objects.all()

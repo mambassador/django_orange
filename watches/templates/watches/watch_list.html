@@ -18,14 +18,14 @@
         <thead>
             <tr>
                 <th>Name</th>
-                <th>Brand</th>
+                <th>Available in stores</th>
             </tr>
         </thead>
         <tbody>
             {% for watch in watch_list %}
                 <tr>
                     <td><a href="{% url 'watches:watch-detail' watch.pk %}">{{ watch.name }}</a></td>
-                    <td>{{ watch.brand }}</td>
+                    <td>{{ watch.store_count }}</td>
                 </tr>
             {% endfor %}
         </tbody>

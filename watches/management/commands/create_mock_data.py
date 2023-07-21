@@ -13,9 +13,9 @@ class Command(BaseCommand):
     def handle(self, *args, **options) -> None:
         """
         Creates:
-            Mock designers: 40 instances
-            Mock brands: 30 instances
-            Mock watches: 600 instances
+            Mock designers: 500 instances
+            Mock brands: 1000 instances
+            Mock watches: 3000 instances
             Mock stores: 10 instances, each associated with 150 random watches
 
         Notes:
@@ -32,7 +32,7 @@ class Command(BaseCommand):
 
         self.stdout.write("Creating mock designers...")
         designers = []
-        for _ in range(40):
+        for _ in range(500):
             designer = Designer(name=fake.name())
             designers.append(designer)
         Designer.objects.bulk_create(designers)
@@ -40,7 +40,7 @@ class Command(BaseCommand):
 
         self.stdout.write("Creating mock brands...")
         brands = []
-        for _ in range(30):
+        for _ in range(1000):
             brand = Brand(name=fake.company(), country=fake.country())
             brands.append(brand)
         Brand.objects.bulk_create(brands)
@@ -51,10 +51,10 @@ class Command(BaseCommand):
         designers = list(Designer.objects.all())
         brands = list(Brand.objects.all())
 
-        for _ in range(600):
+        for _ in range(20000):
             if fake.boolean(chance_of_getting_true=50):
                 watch = Watch(
-                    name=" ".join([fake.unique.word().title() for _ in range(2)]),
+                    name=" ".join([fake.word().title() for _ in range(2)]),
                     price=fake.pydecimal(min_value=10, max_value=1000, right_digits=2),
                     colour=fake.safe_color_name().title(),
                     size=fake.pydecimal(min_value=20, max_value=50, right_digits=1),
@@ -63,7 +63,7 @@ class Command(BaseCommand):
                 )
             else:
                 watch = Watch(
-                    name=fake.unique.word().title(),
+                    name=fake.word().title(),
                     price=fake.pydecimal(min_value=10, max_value=1000, right_digits=2),
                     colour=fake.safe_color_name().title(),
                     size=fake.pydecimal(min_value=20, max_value=50, right_digits=1),
@@ -71,18 +71,20 @@ class Command(BaseCommand):
                     brand=fake.random_element(brands),
                 )
             watches.append(watch)
+
         Watch.objects.bulk_create(watches)
         self.stdout.write(self.style.SUCCESS("Fake watches created successfully."))
 
         self.stdout.write("Creating mock stores...")
         stores = []
-        for _ in range(10):
+        for _ in range(50):
             store = Store(name=fake.company())
             store.save()
             stores.append(store)
             for store in stores:
-                store_watches = sample(watches, 150)
+                store_watches = sample(watches, 300)
                 store.watches.set(store_watches)
+                self.stdout.write(f"Created store {_} {store.name}")
 
         self.stdout.write(self.style.SUCCESS("Mock stores created successfully."))
 

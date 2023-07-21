@@ -155,3 +155,10 @@ CELERY_ENABLE_UTC = False
 
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 NOREPLY_EMAIL = "noreply@django.io"
+
+CACHES = {
+    "default": {
+        "BACKEND": "django.core.cache.backends.redis.RedisCache",
+        "LOCATION": "redis://127.0.0.1:6379",
+    }
+}

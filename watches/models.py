@@ -17,7 +17,7 @@ class Brand(models.Model):
 
 
 class Watch(models.Model):
-    name = models.CharField(max_length=100, unique=True)
+    name = models.CharField(max_length=100, unique=False)
     price = models.DecimalField(max_digits=10, decimal_places=2)
     designer = models.ForeignKey(Designer, on_delete=models.CASCADE)
     brand = models.ForeignKey(Brand, on_delete=models.CASCADE)

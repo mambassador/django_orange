@@ -16,13 +16,16 @@
         <thead>
             <tr>
                 <th>Name</th>
+                <th>Available Watches</th>
             </tr>
         </thead>
         <tbody>
             {% for designer in designer_list %}
                 <tr>
                     <td><a href="{% url 'watches:designer-detail' designer.pk %}">{{ designer.name }}</a></td>
+                    <td>{{ designer.watch_count }}</td>
                 </tr>
+
             {% endfor %}
         </tbody>
     </table>
